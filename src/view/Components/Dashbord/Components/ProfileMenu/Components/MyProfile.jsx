@@ -1,46 +1,32 @@
-import React, { useState } from "react";
+import React from "react";
+import profile from "../../images/profile.jpg";
 
 const MyProfile = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [address, setAddress] = useState("");
-  const [role,setRole] = useState("");
   return (
     <div className="auth-container">
       <div className="form-container">
-        <div className="form-toggle">
-          <>
-            <h2>Login Form</h2>
-            <label>profile:</label>
-            <img src="" alt="admin profile" />
-            <br/>
-            <br/>
-            <label>Name:</label>
-            <input
-              type="text"
-              placeholder="enter name"
-              onChange={(e) => setName(e.target.value)}
-            />
+        <form>
+          <div className="profile-section">
+            <img src={profile} alt="admin-profile" className="profile-img" />
+            <h2 className="admin-name">[Admin Name]</h2>
+          </div>
+
+          <div className="row">
+            <label>name:</label>
+            <input type="text" placeholder="" readOnly />
             <label>Email:</label>
-            <input
-              type="email"
-              placeholder="Enter Email"
-              onChange={(e) => setEmail(e.target.value)}
-            />
-            <label>addrerss:</label>
-            <input
-              type="text"
-              placeholder="enter address"
-              onChange={(e) => setAddress(e.target.value)}
-            />
-            <label>Role:</label>
-            <input
-              type="text"
-              placeholder="Enter Role"
-              onChange={(e) => setRole(e.target.value)}
-            />
-          </>
-        </div>
+            <input type="email" placeholder="" readOnly />
+          </div>
+
+          <div className="row">
+            <label>Address</label>
+            <input type="text" placeholder="" readOnly />
+            <label>Role</label>
+            <input type="text" placeholder="" readOnly />
+          </div>
+
+          {/* <button type="button">Submit</button> */}
+        </form>
       </div>
     </div>
   );

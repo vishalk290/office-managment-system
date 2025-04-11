@@ -40,7 +40,12 @@
 /* this is header.css  */
 
 
-.main-header {
+.main-header { 
+  position: fixed;           /* Keeps the navbar fixed */
+  top: 0;                    /* Sticks it to the top */
+  left: 0;
+  width: 98%;
+  height: 60px;         
   background-color: #004080;
   padding: 10px 20px;
   color: white;
@@ -48,6 +53,7 @@
 }
 
 .header-content {
+ 
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -147,3 +153,88 @@
   color: #007bff;
   border-radius: 4px;
 }
+
+
+
+
+
+/* myprofile section  */
+.profile-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.profile-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.admin-name {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 0;
+}
+
+/* Row layout for form fields */
+.row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="email"] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+/* Container for the profile section */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background-color: #f4f4f4;
+  min-height: 100vh;
+}
+
+.form-container {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 700px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+button {
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+
+
+/* ---------------------------------------------------------------------------------------------------
+ */
+
