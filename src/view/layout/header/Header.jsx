@@ -4,13 +4,7 @@ import {useNavigate } from "react-router-dom";
 
 import MyProfile from '../../Components/Dashbord/Components/ProfileMenu/ProfileMenu.jsx';
 
-
-
-
-
-
 const Header = ()=> {
-
     const navigate = useNavigate();
 
     return(

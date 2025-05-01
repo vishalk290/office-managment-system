@@ -4,7 +4,7 @@ const Dashbord = () => {
   return (
     <div>
       
-      <h1>this is our client Dashbord</h1>
+      <h1 style={{padding:"65px"}}>this is our client Dashbord</h1>
     </div>
   )
 }
