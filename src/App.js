@@ -17,6 +17,7 @@ import ProfileMenu from "./view/Components/Dashbord/Components/ProfileMenu/Profi
 import MyProfile from "./view/Components/Dashbord/Components/ProfileMenu/Components/MyProfile.jsx";
 import ChangePassword from "./view/Components/Dashbord/Components/ProfileMenu/Components/ChangePassword.jsx";
 import Setting from "./view/Components/Dashbord/Components/ProfileMenu/Components/Setting.jsx";
+// import Logout from "./view/Components/Dashbord/Components/ProfileMenu/Components/Logout.jsx";
 
 function App() {
    const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -42,12 +43,13 @@ function App() {
             <Route path="/myprofile" element={<MyProfile />} />
             <Route path="/changepassword" element={<ChangePassword />} />
             <Route path="/setting" element={<Setting />} />
+            {/* <Route path="/logout" element={<Logout />} /> */}
           </Routes>
           <Footer />
         </>
       ) : (
         <Routes>
-          <Route path="*" element={<AuthForm />} />
+          <Route path="*" element={<AuthForm setIsAuthenticated={setIsAuthenticated} />} />
         </Routes>
       )}
     </>

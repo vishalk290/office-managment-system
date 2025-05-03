@@ -17,7 +17,7 @@ const MyProfile = () => {
         <form>
           <div className="profile-section">
             <img src={profile} alt="admin-profile" className="profile-img" />
-            <h2 className="admin-name">{user?.name || "admin"}</h2>
+            <h2 className="admin-name">welcome {user?.name || "admin"} </h2>
           </div>
         
           
@@ -26,14 +26,15 @@ const MyProfile = () => {
             <label>name:</label>
             <input type="text" value={user?.name || "admin"} placeholder="" readOnly />
             <label>Email:</label>
-            <input type="email" value={user?.email || ""} placeholder="" readOnly />
+            <input type="email" value={user?.email || "please provide email"} placeholder="" readOnly />
           </div>
 
           <div className="row">
+            
             <label>Address</label>
-            <input type="text"  value={user?.address || ""} placeholder="" readOnly />
+            <input type="text"  value={user?.address || "peovide address"} placeholder="" readOnly />
             <label>Role</label>
-            <input type="text" value={user?.role || "admin"} placeholder="" readOnly />
+            <input type="text" value={user?.role || "provide role"} placeholder="" readOnly />
           </div>
 
           {/* <button type="button">Submit</button> */}

@@ -4,9 +4,10 @@ import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import profile from "../images/profile.jpg";
 
-function AuthForm() {
+function AuthForm( {setIsAuthenticated }) {
   const [isLogin, setIsLogin] = useState(true);
   const navigate = useNavigate();
+
   const {
     register,
     handleSubmit,
@@ -20,9 +21,11 @@ function AuthForm() {
 
       if (userData && userData.password === data.password) {
         localStorage.setItem("currentUser", JSON.stringify(userData));
-        toast.success(`Welcome ${userData.name} sucessfully logged in! `);
+        toast.success(`Welcome ${userData.name}!`);
+        setIsAuthenticated(true);
+
         setTimeout(() => {
-          navigate("");
+          navigate("/");
         }, 1500);
       } else {
         toast.error("Invalid email or password.");
@@ -34,13 +37,15 @@ function AuthForm() {
       setIsLogin(true);
     }
   };
+  localStorage.removeItem("currentUser");
+   setIsAuthenticated(false);
 
   return (
     <div className="auth-container">
       <div className="form-container">
         <div className="profile-section">
           <img src={profile} alt="admin-profile" className="profile-img" />
-          <h2 className="admin-name">{isLogin ? "Login" : "Register"}</h2>
+          <h2 className="admin-name">{isLogin ? "Welcome" : "Welcome"}</h2>
         </div>
         <form onSubmit={handleSubmit(onSubmit)}>
           {!isLogin && (
