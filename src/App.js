@@ -12,16 +12,19 @@ import Footer from "./view/Layout/Footer/Footer.jsx";
 import Dashbord from "./view/Components/Dashbord/Dashbord.jsx";
 import User from "./view/Components/Dashbord/Components/User/User.jsx";
 import Project from "./view/Components/Dashbord/Components/Project/Project.jsx";
-import Client from "./view/Components/Dashbord/Components/Client/Client.jsx";
+import Clients from "./view/Components/Dashbord/Components/Client/Clients.jsx";
+// import Clients from "./view/Components/Dashbord/Components/Client/Clients.jsx";
+
 import ProfileMenu from "./view/Components/Dashbord/Components/ProfileMenu/ProfileMenu.jsx";
 import MyProfile from "./view/Components/Dashbord/Components/ProfileMenu/Components/MyProfile.jsx";
 import ChangePassword from "./view/Components/Dashbord/Components/ProfileMenu/Components/ChangePassword.jsx";
 import Setting from "./view/Components/Dashbord/Components/ProfileMenu/Components/Setting.jsx";
+
 // import Logout from "./view/Components/Dashbord/Components/ProfileMenu/Components/Logout.jsx";
 
 function App() {
-   const [isAuthenticated, setIsAuthenticated] = useState(false);
-    // const [isLogin, setIsLogin] = useState(true);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  // const [isLogin, setIsLogin] = useState(true);
 
   useEffect(() => {
     const user = localStorage.getItem("currentUser");
@@ -37,7 +40,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Dashbord />} />
             <Route path="/user" element={<User />} />
-            <Route path="/client" element={<Client />} />
+            <Route path="/clients" element={<Clients />} />
+            {/* <Route path="/" element={<PurchaseDetails />} /> */}
             <Route path="/project" element={<Project />} />
             <Route path="/profilemenu" element={<ProfileMenu />} />
             <Route path="/myprofile" element={<MyProfile />} />
@@ -49,7 +53,10 @@ function App() {
         </>
       ) : (
         <Routes>
-          <Route path="*" element={<AuthForm setIsAuthenticated={setIsAuthenticated} />} />
+          <Route
+            path="*"
+            element={<AuthForm setIsAuthenticated={setIsAuthenticated} />}
+          />
         </Routes>
       )}
     </>

@@ -1,5 +1,4 @@
-Base styles
-.App {
+Base styles .App {
   text-align: center;
 }
 
@@ -15,7 +14,7 @@ Base styles
 }
 
 .App-header {
-  /* background-color: ; */
+  /* background-color: red; */
   min-height: 100vh;
   display: flex;
   /* flex-direction: column; */
@@ -55,11 +54,13 @@ Base styles
 
 .header-content {
   display: flex;
-  flex-direction: row; /* Change this from row-reverse to row */
+  flex-direction: row;
+  /* Change this from row-reverse to row */
   align-items: center;
   justify-content: space-between;
   max-width: 1370px;
   padding-top: 10px;
+  overflow: visible;
   margin: 0 auto;
   width: 100%;
 }
@@ -76,7 +77,8 @@ Base styles
   display: flex;
   align-items: center;
   gap: 20px;
-  flex-direction: row; /* Change from row-reverse to row */
+  flex-direction: row;
+  /* Change from row-reverse to row */
 }
 
 /* Navigation links */
@@ -101,7 +103,7 @@ Base styles
 }
 
 /* Responsive Styles */
-/* @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .header-content {
     flex-direction: column;
     align-items: flex-start;
@@ -140,21 +142,24 @@ Base styles
   .nav-links li {
     font-size: 0.9rem;
   }
-} */
+}
+
+.profile-dropdown {
+  position: relative;
+  display: inline-block;
+}
 
 /* Dropdown menu */
 .dropdown-menu {
   position: absolute;
-  top: 35px;
+  top: 40px;
   right: 0;
   background-color: white;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  padding: 10px 0;
-  border-radius: 8px;
+  border: 1px solid #ccc;
+  z-index: 1100;
+  padding: 10px;
   list-style: none;
-  z-index: 999;
-  width: 150px;
-  animation: dropdownFade 0.3s ease;
+  animation: dropdownFade 0.3s ease-out;
 }
 
 @keyframes dropdownFade {
@@ -169,9 +174,17 @@ Base styles
   }
 }
 
-.dropdown-menu li {
-  margin: 0;
-  padding: 10px 20px;
+.dropdown-menu {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  /* background-color: white;
+  border: 1px solid #ccc; */
+  background: yellow;
+  border: 2px solid red;
+  z-index: 1100px;
+  padding: 10px;
+  list-style: none;
 }
 
 .dropdown-menu li a {
@@ -376,4 +389,152 @@ button {
 
 button:hover {
   background-color: #45a049;
+}
+
+
+/* ...............oldclients.css......................................................................................... */
+
+
+
+.add {
+  max-width: 1200;
+  margin: 40px auto;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px #eee;
+  padding: 0;
+  border: 2px solid #2563eb;
+  font-Family: sans-serif;
+}
+
+.add1 {
+  background-color: #2563eb;
+  color: #fff;
+  padding: 18px 36px 11px 36px;
+  font-weight: 700px;
+  font-size: 22px;
+  border-top-left-radius: 13px;
+  border-top-right-radius: 40px;
+  width: fit-content;
+  margin-left: -2px;
+}
+
+.add-content {
+  padding: 8px 28px;
+  font-weight: 600;
+  border: 1px solid #2563eb;
+  cursor: pointer;
+  position: relative;
+}
+
+.content1 {
+  position: relative;
+  margin-top: 48px;
+}
+
+.btn {
+  background: #2563eb;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  padding: 5px 13px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.col {
+  position: absolute;
+  right: 0px;
+  top: 38px;
+  background: #fff;
+  border: 1px solid #bbb;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px #ddd;
+  min-width: 160px;
+  z-index: 10px;
+}
+
+.btn-mt-3 {
+  background-color: blue;
+  color: white;
+  padding: 10px 25px;
+}
+
+.filter {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  margin-top: 24px;
+  margin-left: 36px;
+}
+
+.edit {
+    padding: 12px 20px;
+    cursor: pointer;
+    color: #2563eb;
+    font-weight: 500;
+}
+
+.edit1 {
+    padding: 12px 20px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+    color: blue;
+    font-weight: 500;
+    transition: background-color 0.5s;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 6px;
+  background: #f9fafb;
+  border-radius: 12px;
+}
+
+.table-head {
+    padding: 11px 5px;
+    background: #e0e7ff;
+    color: #312e81;
+    border: 1px solid #dbdbdb;
+    font-weight: 600px;
+    font-size: 15px;
+    text-align: center;
+}
+.table-data {
+   text-align:center; 
+    padding: 40px;
+    margin: 20px;;
+}
+
+.Pagination {
+  display: flex;
+  align-items: center;
+   gap: 18px;
+}
+
+.table2 {
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  border-collapse: collapse;
+  background: #f9fafb;
+  border-radius: 8px;              
+}
+
+.table3 {
+  padding: 8px 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  width: 20%;
+}
+
+.buton-2 {
+
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6;
+  cursor: pointer;
 }

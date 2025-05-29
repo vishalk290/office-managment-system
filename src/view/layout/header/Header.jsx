@@ -2,7 +2,9 @@ import React from "react";
 import {useNavigate } from "react-router-dom";
 // import MyProfile from './view/Components/Dashbord/Components/MyProfile/MyProfile.jsx';
 
-import MyProfile from '../../Components/Dashbord/Components/ProfileMenu/ProfileMenu.jsx';
+// import ProfileMenu from "../../Components/Dashbord/Components/ProfileMenu/ProfileMenu.jsx";
+
+ import MyProfile from '../../Components/Dashbord/Components/ProfileMenu/ProfileMenu.jsx';
 
 const Header = ()=> {
     const navigate = useNavigate();
@@ -16,10 +18,12 @@ const Header = ()=> {
                 <ul className="nav-links">
                     <li onClick={()=>navigate("/")}>Dashbord</li>
                     <li onClick={()=>navigate("/User")}>user</li>
-                    <li onClick={()=>navigate("/client")}>client</li>
+                    <li onClick={()=>navigate("/Clients")}>Clients</li>
                     <li onClick={()=>navigate("/project")}>projects</li>
                 </ul> 
-                    <MyProfile/>
+                
+                  {/* <ProfileMenu />  */}
+                     <MyProfile/> 
                </div>     
             </div>
         </div>

@@ -1,6 +1,6 @@
 import React from "react";
-import profile from "../../images/profile.jpg";
-import {useState, useEffect} from "react";
+import profile from "../../images/profile.jpg"; //  
+ import {useState, useEffect} from "react";
 
 const MyProfile = () => {
 

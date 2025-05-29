@@ -60,13 +60,13 @@ const ChangePassword = () => {
     setConfirmPassword("");
 
     setTimeout(() => {
-      window.location.reload();
-    const SuccessMsg = "please weit!";
-    setSuccess(SuccessMsg);
-    toast.success(SuccessMsg);
+      // window.location.reload();
+      const SuccessMsg = "please weit!";
+      setSuccess(SuccessMsg);
+      toast.success(SuccessMsg);
 
       // navigat e("*");
-    }, 4000);
+    }, 2000);
   };
   return (
     <div className="auth-container">
